@@ -10,8 +10,6 @@
 * 2/7/23 - Dylan Rothbauer - Added function comments
 */
 
-// TEST FOR GIT
-
 /*
 * Test funciton of Memory War
 */

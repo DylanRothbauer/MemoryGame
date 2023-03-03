@@ -5,6 +5,7 @@ using namespace std;
 /*
 * CHANGE LOG:
 * 2/7/23 - Dylan Rothbauer - Added function comments
+* 3/3/23 - Dylan Rothbauer - Added comment on private fields
 */
 
 /*
@@ -12,7 +13,7 @@ using namespace std;
 */
 class Player {
 private:
-	int score;
+	int score; // Score for each player. Will be decider of who wins
 
 
 public:

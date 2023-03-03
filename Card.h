@@ -4,6 +4,7 @@
 /*
 * CHANGE LOG:
 * 2/7/23 - Dylan Rothbauer - Added function comments
+* 3/3/23 - Dylan Rothbauer - Added comments to all fields
 */
 
 /*
@@ -12,8 +13,8 @@
 class Card {
 
 private:
-	int num;
-	bool isObtained = false;
+	int num; // Number associated with each card (its card face value)
+	bool isObtained = false; // A boolean to keep track of if a card has been "flipped" over
 	
 
 public:

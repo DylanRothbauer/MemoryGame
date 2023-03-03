@@ -6,6 +6,7 @@
 /*
 * CHANGE LOG:
 * 2/7/23 - Dylan Rothbauer - Added function comments
+* 3/3/23 - Dylan Rothbauer - Added security check for negitive integer input
 */
 
 /*
@@ -14,11 +15,11 @@
 class Game {
 
 private:
-	vector<vector<Card>> ourDeck;
-	Player player1;
-	Player player2;
-	int pairs = 10;
-	Player* playerPtr;
+	vector<vector<Card>> ourDeck; // The deck that will hold cards
+	Player player1; // First player
+	Player player2; // Second player
+	int pairs = 10; // Number of pairs within a Game
+	Player* playerPtr; // A pointer to a player to keep track of whose turn it is
 
 public:
 	/*
@@ -167,14 +168,14 @@ public:
 			cout << "Pick your first location: " << endl;
 			cout << "Row: ";
 			cin >> rowA;
-			while (rowA > 4) {
+			while (rowA > 4 || rowA < 0) {
 				cout << "Invalid number. Pick a number 0 through 4: ";
 				cin >> rowA;
 			}
 
 			cout << "Colmn: ";
 			cin >> colmnA;
-			while (colmnA > 3) {
+			while (colmnA > 3 || colmnA < 0) {
 				cout << "Invalid number. Pick a number 0 through 3: ";
 				cin >> colmnA;
 			}
@@ -192,7 +193,7 @@ public:
 
 				cout << "Colmn: ";
 				cin >> colmnA;
-				while (colmnA > 3) {
+				while (colmnA > 3 || colmnA < 0) {
 					cout << "Invalid number. Pick a number 0 through 3: ";
 					cin >> colmnA;
 				}
@@ -201,14 +202,14 @@ public:
 			cout << endl << "Pick your second location: " << endl;
 			cout << "Row: ";
 			cin >> rowB;
-			while (rowB > 4) {
+			while (rowB > 4 || rowB < 0) {
 				cout << "Invalid number. Pick a number 0 through 4: ";
 				cin >> rowB;
 			}
 
 			cout << "Colmn: ";
 			cin >> colmnB;
-			while (colmnB > 3) {
+			while (colmnB > 3 || colmnB < 0) {
 				cout << "Invalid number. Pick a number 0 through 3: ";
 				cin >> colmnB;
 			}
@@ -219,14 +220,14 @@ public:
 				cout << "Pick your second location: " << endl;
 				cout << "Row: ";
 				cin >> rowB;
-				while (rowB > 4) {
+				while (rowB > 4 || rowB < 0) {
 					cout << "Invalid number. Pick a number 0 through 4: ";
 					cin >> rowB;
 				}
 
 				cout << "Colmn: ";
 				cin >> colmnB;
-				while (colmnB > 3) {
+				while (colmnB > 3 || colmnB < 0) {
 					cout << "Invalid number. Pick a number 0 through 3: ";
 					cin >> colmnB;
 				}
@@ -240,14 +241,14 @@ public:
 				cout << "Pick your second location: " << endl;
 				cout << "Row: ";
 				cin >> rowB;
-				while (rowB > 4) {
+				while (rowB > 4 || rowB < 0) {
 					cout << "Invalid number. Pick a number 0 through 4: ";
 					cin >> rowB;
 				}
 
 				cout << "Colmn: ";
 				cin >> colmnB;
-				while (colmnB > 3) {
+				while (colmnB > 3 || colmnB < 0) {
 					cout << "Invalid number. Pick a number 0 through 3: ";
 					cin >> colmnB;
 				}
